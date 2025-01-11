@@ -1,13 +1,6 @@
 name: Run Tests
 
-on:
-  push:
-    branches:
-      - main
-      - dev
-  pull_request:
-  schedule:
-    - cron: '0 0 * * *'
+on: push
 
 jobs:
   php-tests:
