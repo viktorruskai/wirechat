@@ -91,14 +91,14 @@
                                             @if ($participant->isAdmin())
                                                 <x-wirechat::dropdown-button
                                                     wire:click="dismissAdmin('{{ $participant->id }}')"
-                                                    wire:confirm="{{ __('Are you sure you want to dismiss :name as Admin ?', ['name' => $participant->participantable?->display_name] }}"
+                                                    wire:confirm="{{ __('Are you sure you want to dismiss :name as Admin ?', ['name' => $participant->participantable?->display_name]) }}"
                                                     class=" dark:hover:bg-gray-700 ">
                                                     @lang('Dismiss As Admin')
                                                 </x-wirechat::dropdown-button>
                                             @else
                                                 <x-wirechat::dropdown-button
                                                     wire:click="makeAdmin('{{ $participant->id }}')"
-                                                    wire:confirm="{{ __('Are you sure you want to make :name an Admin ?', ['name' => $participant->participantable?->display_name] }}"
+                                                    wire:confirm="{{ __('Are you sure you want to make :name an Admin ?', ['name' => $participant->participantable?->display_name]) }}"
                                                     class=" dark:hover:bg-gray-700 ">
                                                     @lang('Make Admin')
                                                 </x-wirechat::dropdown-button>
